@@ -21,4 +21,34 @@ int main() {
             printf("%d \n", array2d[j][k]);
         }
     }
+
+    // Array
+    int arrs[5] = {3, 10, 5, 6, 9};
+    int size = sizeof(arrs) / sizeof(arrs[0]);
+    int k = 0;
+
+    while(k < size) {
+        printf("Element at index %d: %d \n", k, arrs[k]);
+        k++;
+    }
+
+    int findarr[10] = {30, 50, 20, 40, 60, 10, 80, 100, 90, 70};
+    int sizeofArr = sizeof(findarr) / sizeof(findarr[0]);
+    int num, found = 0;
+
+    printf("Enter number you find into the array: ");
+    scanf("%d", &num);
+
+    for(int m = 0; m < sizeofArr; m++){
+        if(findarr[m] == num){
+            found = m;
+            break;
+        }
+    }
+
+    if(found != 0){
+        printf("Number %d found at index %d. \n", num, found);
+    } else {
+        printf("Number %d not found in the data \n", num);
+    }
 }
